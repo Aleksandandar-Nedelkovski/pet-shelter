@@ -1,0 +1,34 @@
+<div>
+  <form (submit)="editPet(pet)">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Pet name:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name"
+        [(ngModel)]="updatedPet.name">
+      <div *ngIf="errors" class='errors'>
+        <p> {{errors}} </p>
+      </div>
+      <label for="exampleFormControlInput1">Pet type:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="type"
+        [(ngModel)]="updatedPet.type">
+      <div *ngIf="errors" class='errors'>
+        <p> {{errors}} </p>
+      </div>
+      <label for="exampleFormControlInput1">Description:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="description"
+        [(ngModel)]="updatedPet.description">
+      <div *ngIf="errors" class='errors'>
+        <p> {{errors}} </p>
+      </div>
+      <label for="exampleFormControlInput1">Skills(optional):</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="skill1" name="skill1"
+        [(ngModel)]="updatedPet.skill1">
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="skill2" name="skill2"
+        [(ngModel)]="updatedPet.skill2">
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="skill3" name="skill3"
+        [(ngModel)]="updatedPet.skill3">
+
+      <button class="btn btn-danger btn-sm" type="submit" [routerLink]="['/pets']">Cancel</button>
+      <button class="btn btn-primary btn-sm" type="submit">Update</button>
+    </div>
+  </form>
+</div>

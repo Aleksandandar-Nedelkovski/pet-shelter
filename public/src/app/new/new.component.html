@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+
+      <form (submit)="createPet()">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Pet name:</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="name"
+            [(ngModel)]="newPet.name">
+          <div *ngIf="errors.name" class='errors'>
+            <p> {{errors.name.message}} </p>
+          </div>
+          <label for="exampleFormControlInput1">Pet type:</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="type" name="type"
+            [(ngModel)]="newPet.type">
+          <div *ngIf="errors.type" class='errors'>
+            <p> {{errors.type.message}} </p>
+          </div>
+          <label for="exampleFormControlInput1">Description:</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="description"
+            name="description" [(ngModel)]="newPet.description">
+          <div *ngIf="errors.type" class='errors'>
+            <p> {{errors.description.message}} </p>
+          </div>
+          <label for="exampleFormControlInput1">Skills(optional):</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="skill1" name="skill1"
+            [(ngModel)]="newPet.skill1"><input type="text" class="form-control" id="exampleFormControlInput1"
+            placeholder="skill2" name="skill2" [(ngModel)]="newPet.skill2"><input type="text" class="form-control"
+            id="exampleFormControlInput1" placeholder="skill3" name="skill3" [(ngModel)]="newPet.skill3">
+          <button class="btn btn-primary btn-sm" type="submit">Submit</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

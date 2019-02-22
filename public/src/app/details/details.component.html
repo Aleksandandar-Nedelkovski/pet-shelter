@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    
+    <div *ngIf="details">
+      <h5>Details about {{details.name}} </h5>
+      <p><b>Pet type:</b> {{details.name}} </p>
+      <p><b>Description:</b> {{details.description}} </p>
+      <p><b>Skill 1:</b> {{details.skill1}} </p>
+      <p><b>Skill 2:</b> {{details.skill3}} </p>
+      <p><b>Skill 3:</b> {{details.skill2}} </p>
+      <button type="submit" (click)="deletePet(pet._id)" class="btn btn-danger btn-sm">Adopt Pet</button>
+      </div>
+
+
+    <!-- <h5>Details about {{pet.name}} </h5>
+    <p><b>Pet type:</b> {{pet.name}} </p>
+    <p><b>Description:</b> {{pet.description}} </p>
+    <p><b>Skill 1:</b> {{pet.skill1}} </p>
+    <p><b>Skill 2:</b> {{pet.skill3}} </p>
+    <p><b>Skill 3:</b> {{pet.skill2}} </p>
+    <button type="submit" (click)="deletePet(pet._id)" class="btn btn-danger btn-sm">Adopt Pet</button>
+  </div> -->
+</div>
